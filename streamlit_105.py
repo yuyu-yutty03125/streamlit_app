@@ -4,7 +4,7 @@ import plotly.express as px
 
 st.title('広告費と売上')
 
-df = pd.read_csv('../files/files/ad_expense_sales.csv')
+df = pd.read_csv('./ad_expense_sales.csv')
 
 with st.sidebar:
     st.subheader('抽出条件')
