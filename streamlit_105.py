@@ -24,7 +24,10 @@ with st.sidebar:
         color='season'
 #st.write(f'{color}が選択されました')
 
-df = df[df['prod_category'].isin(prod_category)]
+# 製品カテゴリー（未選択なら全件）
+if prod_category:
+    df = df[df['prod_category'].isin(prod_category)]
+#df = df[df['prod_category'].isin(prod_category)]
 df = df[df['media'] == media]
 
 #st.dataframe(df)
